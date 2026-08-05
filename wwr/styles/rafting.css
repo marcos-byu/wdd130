@@ -135,26 +135,115 @@ header nav {
   flex-shrink: 0;
 }
 
-.adventure-gallery {
+.adventure-gallery,
+.employee-gallery {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   margin-top: 10px;
 }
 
-.adventure-gallery figure {
+.adventure-gallery {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.employee-gallery {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.adventure-gallery figure,
+.employee-gallery figure {
   margin: 0;
   text-align: center;
 }
 
-.adventure-gallery img {
+.adventure-gallery img,
+.employee-gallery img {
   width: 100%;
   height: auto;
 }
 
-.adventure-gallery figcaption {
+.adventure-gallery figcaption,
+.employee-gallery figcaption {
   font-size: 0.85rem;
   padding: 4px 0;
+}
+
+.page-title {
+  position: static;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 16px;
+  margin: 16px;
+}
+
+.map {
+  border: 0;
+  flex-shrink: 0;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 8px;
+  border: 1px solid var(--accent1-color);
+  border-radius: 4px;
+  font-family: var(--body-font);
+}
+
+.contact-form fieldset {
+  border: 1px solid var(--accent1-color);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.contact-form fieldset label {
+  display: block;
+  font-weight: normal;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: var(--accent1-color);
 }
 
 footer {
