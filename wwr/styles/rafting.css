@@ -123,16 +123,34 @@ header nav {
   background-color: var(--primary-color);
 }
 
-.history-content {
+.history-content,
+.trip-detail {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.history-content img {
-  width: 220px;
+.trip-detail {
+  margin-bottom: 16px;
+}
+
+.trip-detail.reverse {
+  flex-direction: row-reverse;
+}
+
+.history-content img,
+.trip-detail img {
   height: auto;
   flex-shrink: 0;
+}
+
+.history-content img {
+  width: 220px;
+}
+
+.trip-detail img {
+  width: 300px;
+  border-radius: 4px;
 }
 
 .adventure-gallery,
@@ -192,20 +210,24 @@ header nav {
   flex-shrink: 0;
 }
 
-.contact-form {
+.contact-form,
+.newsletter-form {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.contact-form label {
+.contact-form label,
+.newsletter-form label {
   font-weight: bold;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
-.contact-form textarea {
+.contact-form textarea,
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
   padding: 8px;
   border: 1px solid var(--accent1-color);
   border-radius: 4px;
@@ -230,7 +252,8 @@ header nav {
   font-weight: normal;
 }
 
-.contact-form button {
+.contact-form button,
+.newsletter-form button {
   align-self: flex-start;
   background-color: var(--primary-color);
   color: #fff;
@@ -242,8 +265,81 @@ header nav {
   cursor: pointer;
 }
 
-.contact-form button:hover {
+.newsletter-form button {
+  align-self: center !important;
+  margin-top: 2px;
+}
+
+.contact-form button:hover,
+.newsletter-form button:hover {
   background-color: var(--accent1-color);
+}
+
+.cta {
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 8px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+
+.cta-button:hover {
+  background-color: var(--accent1-color);
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.grid-item-content {
+  padding: 8px 0;
+}
+
+.newsletter {
+  text-align: center;
+}
+
+.newsletter-form {
+  align-items: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.trips-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.trips-table th,
+.trips-table td {
+  border: 1px solid var(--accent1-color);
+  padding: 8px;
+  text-align: left;
+}
+
+.trips-table th {
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+
+.trips-table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 footer {
